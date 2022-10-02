@@ -1,0 +1,23 @@
+<!-- templates/base.html -->
+
+{% load static %}
+
+<html>
+
+<head>
+    <title>Django Blog</title>
+</head>
+
+<body>
+    <header>
+        <h1><a href="{% url 'home' %}">Django blog</a></h1>
+        <link href="https://fonts.googleapis.com/css?family=Soure+Sans+Pro:400" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    </header>
+    <div>
+        {% block content %}
+        {% endblock content %}
+    </div>
+</body>
+
+</html>
